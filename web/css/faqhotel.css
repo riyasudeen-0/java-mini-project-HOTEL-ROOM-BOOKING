@@ -1,0 +1,51 @@
+body {
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ background-image:url(hotel1.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+ color: black;
+ margin: 0;
+ padding: 60px 20px;
+ font-size: 20px;
+ line-height: 1.7;
+ }
+ h1 {
+ text-align: center;
+ font-size: 36px;
+ margin-bottom: 50px;
+ color: white;
+ font-weight: bolder;
+ }
+ .faq-container {
+ max-width: 900px;
+ margin: 0 auto;
+ }
+ details {
+ background-color: #fff;
+ margin-bottom: 20px;
+ padding: 25px;
+ border-radius: 10px;
+ box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+ transition: all 0.3s ease;
+ }
+ summary {
+ font-weight: bold;
+ cursor: pointer;
+ font-size: 24px;
+ position: relative;
+ }
+summary::-webkit-details-marker {
+ display: none;
+ }
+ summary::after {
+ content: '+';
+ float: right;
+ font-size: 28px;
+ }
+ details[open] summary::after {
+ content: '−';
+ }
+ details p {
+    margin-top: 20px;
+ font-size: 20px;
+ }

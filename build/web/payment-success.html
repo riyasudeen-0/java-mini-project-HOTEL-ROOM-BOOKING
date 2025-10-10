@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Success</title>
+    <link rel="stylesheet" href="css/success.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Payment Successful! 🎉</h2>
+        <p>Your room has been booked successfully.</p>
+        <p><strong>Booking Code:</strong> 
+            <span id="bookingCode"></span>
+        </p>
+        <a href="home.html">Back to Home</a>
+    </div>
+
+    <script>
+        // Get booking code from URL
+        const params = new URLSearchParams(window.location.search);
+        const code = params.get("code");
+        document.getElementById("bookingCode").innerText = code || "N/A";
+    </script>
+</body>
+</html>

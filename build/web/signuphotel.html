@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="css/signuphotel.css">
+</head>
+<body>
+  <div class="container">
+    <form class="login-box" action="register" method="post">
+      <h2>Sign Up</h2>
+
+      <div class="input-box">
+        <input type="text" name="firstName" placeholder="First Name" required>
+        <span class="icon">👤</span>
+      </div>
+
+      <div class="input-box">
+        <input type="text" name="lastName" placeholder="Last Name" required>
+        <span class="icon">👤</span>
+      </div>
+
+      <div class="input-box">
+        <input type="email" name="email" placeholder="Email" required>
+        <span class="icon">📧</span>
+      </div>
+
+      <div class="input-box">
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <span class="icon">☎️</span>
+      </div>
+
+      <div class="input-box">
+        <input type="password" name="password" placeholder="Password" required>
+        <span class="icon">🔒</span>
+      </div>
+
+      <button type="submit" class="login-btn">Sign Up</button>
+    </form>
+
+    <p id="error" style="color:red;"></p>
+  </div>
+
+  <script>
+    // Display error from servlet if present
+    const params = new URLSearchParams(window.location.search);
+    const error = params.get('error');
+    if (error) {
+      document.getElementById('error').innerText = error;
+    }
+  </script>
+</body>
+</html>

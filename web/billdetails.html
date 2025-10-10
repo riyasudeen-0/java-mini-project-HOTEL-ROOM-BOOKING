@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bill Details</title>
+  <link rel="stylesheet" href="css/billdetails.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Bill Details</h2>
+
+    <div class="bill-info">
+      <p><strong>Room Details:</strong> Booking summary will appear here.</p>
+      <p><strong>Payment Details:</strong>Payment details will appear here.</p>
+    </div>
+
+ <button type="button" class="btn" onclick="payNow()">Pay Now</button>
+
+
+<script>
+function payNow() {
+    // Generate a random booking code
+    const bookingCode = 'HB' + Math.floor(Math.random() * 100000);
+    
+    // Redirect to success page with the code in URL
+    window.location.href = `payment-success.html?code=${bookingCode}`;
+}
+</script>
+
+    <br><br>
+    <a href="booking.html" class="logout">Logout</a>
+  </div>
+</body>
+</html>
